@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="container">
+      <form method="POST" action="upload">
+        <input
+          name="url"
+          value="https://cdn.cebraspe.org.br/concursos/PM_AL_18_SOLDADO/arquivos/GAB_DEFINITIVO_410_PMAL001__PAG_7.PDF"
+          autofocus
+        />
+        <button>Enviar</button>
+      </form>
+    <div style="display:inline-block;max-width:500px;border:1px solid red;word-wrap: break-word;">
+          <%if(typeof data !== 'undefined'){%>
+            <%=data%><br/><hr>
+            <%=linhas.dataAplicacao%><br/><hr>
+            <%=linhas.numeroQuestoes%>
+            <%}%>
+      </div>
+          
+    </div>
   </body>
 </html>
